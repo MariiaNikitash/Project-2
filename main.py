@@ -89,5 +89,8 @@ def analyze(inp: str) -> None:
     action_table.append('Accepted') if stack[-1] == '1' and q[0] == '$' else action_table.append('Not Accepted')
 
     print(tabulate({'Stack': stack_table, 'Input': input_table, 'Action': action_table}, headers='keys'))
+    print('\n\n')
 
-analyze('id + * + id * + * + ) $')
+analyze('( id + id ) * id $')
+analyze('id * id $')
+analyze('( id * ) $')
