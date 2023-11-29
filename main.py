@@ -106,14 +106,7 @@ class Analyzer:
         print(tabulate({'Stack': stack_table, 'Input': input_table, 'Action': action_table}, headers='keys'))
         print('\n\n')
 
-analyze('id + * id $')
-
-<<<<<<< HEAD
-    print(tabulate({'Stack': stack_table, 'Input': input_table, 'Action': action_table}, headers='keys'))
-    print('\n\n')
 
 analyze('( id + id ) * id $')
 analyze('id * id $')
 analyze('( id * ) $')
-=======
->>>>>>> db5eb63 (working on class implementation)
