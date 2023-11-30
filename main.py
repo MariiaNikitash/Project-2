@@ -89,8 +89,9 @@ def analyze(inp: str) -> None:
     action_table.append('Accepted') if stack[-1] == '1' and q[0] == '$' else action_table.append('Not Accepted')
 
     print(tabulate({'Stack': stack_table, 'Input': input_table, 'Action': action_table}, headers='keys'))
-    print('\n\n')
+    print('\n')
+    print(f'Output: String is {"Accepted" if stack[-1] == "1" and (not q or q[0] == "$") else "Not Accepted"}\n\n')
 
-analyze('( id + id ) * id $')
-analyze('id * id $')
-analyze('( id * ) $')
+# Accept user input
+input_string = input("Enter the string: ")
+analyze(input_string)
